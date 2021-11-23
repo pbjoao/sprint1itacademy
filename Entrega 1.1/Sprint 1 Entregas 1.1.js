@@ -109,3 +109,5 @@ for(let x in loops){
 
 // N3 ex02
 (function(nombre){console.log(nombre)})("jose");
+
+//jjjj
