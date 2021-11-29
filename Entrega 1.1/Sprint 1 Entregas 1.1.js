@@ -52,12 +52,6 @@ function loop(){
 arrayLoops[i];
 
 
-
-// for(let x in loops){
-//     console.log(x);
-// }
-
-
 // N3 ex02
 var exN3 = (function(nombre){console.log(nombre)})("jose");
 
