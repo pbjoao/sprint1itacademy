@@ -33,7 +33,7 @@ valor(3);
 
 // N3 ex01
 
-var arrayLoops =[];
+var arrayLoops = [];
 
 function loop(){
 
