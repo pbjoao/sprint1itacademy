@@ -1,7 +1,7 @@
 //Entrega 1.2
 
 // N1 ex01
-(function(nom1, nom2){console.log(`${nom1} ${nom2}`)})("Pedro","Joao");
+(function(num1, num2){console.log(num1 + num2);
 
 
 // N2 ex01
@@ -32,21 +32,25 @@ console.log(persona1.dirNome());
 // N3 ex 01
 //TODO crear una clase abastracta
 
-'use strict';
 
-class Abstract{
+// class Abstracta{
+//     constructor(){
+//         if(new.target===Abstracta){
+//             throw new Error("Esta clase es abstracta y no puede ser instanciada");
+//         }
+//     }
 
-}
+// }
 
-//TODO crear una funcion que instancia objetos abstractos
+// //TODO crear una funcion que instancia objetos abstractos
 
-function crarObj(newObj){
+// function crarObj(newObj){
 
-    newObj = {
-        prop1:'',
-        prop2:0   
-    }
-    claseAbst = new ClaseAbst();
-}
+//     newObj = {
+//         prop1:'',
+//         prop2:0   
+//     }
+//     claseAbst = new ClaseAbst();
+// }
 
-console.log(crarObj('obj1'));
+// console.log(crarObj('obj1'));
