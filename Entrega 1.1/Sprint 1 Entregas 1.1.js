@@ -25,16 +25,15 @@ let numero=0;
 
 function valor(numero){
 
-    console.log(`El valor es ${numero}`);
+   return `El valor es ${numero}`;
 }
 
-valor(3);
+console.log(valor(3));
 
 
 // N3 ex01
 
 var arrayLoops = [];
-
 function loop(){
 
     for(i=0; i<=9; i++){
@@ -49,7 +48,7 @@ function loop(){
     arrayLoops.push(loop());
  }
  
-arrayLoops[i];
+ //loopeo.arrayLoops.forEach(loop());
 
 
 // N3 ex02
