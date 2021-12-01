@@ -34,21 +34,31 @@ console.log(valor(3));
 // N3 ex01
 
 var arrayLoops = [];
+
 function loop(){
 
     for(i=0; i<=9; i++){
 
         console.log(i);
     }   
-    console.log("final loop")
+    return 'final loop'
  }
 
  while(arrayLoops.length<10){
 
-    arrayLoops.push(loop());
+    arrayLoops.push(loop);
  }
- 
- //loopeo.arrayLoops.forEach(loop());
+
+function loopsEject(){
+
+    arrayLoops.forEach( function(elementos){
+
+        console.log(elementos());
+    } );
+
+}
+
+loopsEject();
 
 
 // N3 ex02
