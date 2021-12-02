@@ -3,7 +3,7 @@
 // N1 ex 01
 //TODO funciones promise
 
-let ejemploDatos = 'aqui están los datos';
+let ejemploDatos = 0;
 
 function mostrarDatos(){
 
@@ -20,4 +20,6 @@ function mostrarDatos(){
     })
 }
 
-mostrarDatos(resolve, reject);
+mostrarDatos()
+    .then(data => console.log(data))
+    .catch(err=>console.log(err))
