@@ -1,7 +1,9 @@
 //Entrega 1.2
 
 // N1 ex01
-(function(num1, num2){console.log(num1 + num2);
+console.log(((num1,num2)=>{
+    return num1 + num2;
+})(2,1));
 
 
 // N2 ex01
@@ -33,24 +35,23 @@ console.log(persona1.dirNome());
 //TODO crear una clase abastracta
 
 
-// class Abstracta{
-//     constructor(){
-//         if(new.target===Abstracta){
-//             throw new Error("Esta clase es abstracta y no puede ser instanciada");
-//         }
-//     }
+class Abstracta{
+    constructor(){
+        if(new.target===Abstracta){
+            throw new Error("Esta clase es abstracta y no puede ser instanciada");
+        }
+    }
 
-// }
+}
 
-// //TODO crear una funcion que instancia objetos abstractos
+//TODO crear una funcion que instancia objetos abstractos
 
-// function crarObj(newObj){
+function crarObj(){
 
-//     newObj = {
-//         prop1:'',
-//         prop2:0   
-//     }
-//     claseAbst = new ClaseAbst();
-// }
+    Object.create(Abstracta.prototype)
+}
 
-// console.log(crarObj('obj1'));
+let obj1 = crarObj();
+let obj2 = crarObj();
+
+console.log(crarObj(obj1, obj2));
