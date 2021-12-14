@@ -1,7 +1,6 @@
 // Entregas 1.3
 
 // N1 ex 01
-//TODO funciones promise
  
 let ejemploDatos = 'aqui están los datos';
 
@@ -28,11 +27,91 @@ mostrarDatos()
 
 const arrowFunciton = (param, callback)=>{
     
-    return (param >= 18) ? callback('Es Mayor edad') : callback('Es menor edad')
+    callback(param);
     
 }
 
-arrowFunciton(19, mgs=> {console.log(mgs)})
+const callback = param => {
+    if(param >= 18){
+        console.log('Es Mayor edad');
+    } else {
+        console.log('Es menor edad');
+    }
+}
+
+arrowFunciton(19, callback);
 
 // N2 ex 01
+
+//empleados
+let employees = [{
+    id: 1,
+    name: 'Linux Torvalds'
+}, {
+    id: 2,
+    name: 'Bill Gates'
+},{
+    id: 3,
+    name: 'Jeff Bezos'
+}];
+ 
+//salarios
+let salaries = [{
+    id: 1,
+    salary: 4000
+}, {
+    id: 2,
+    salary: 1000
+}, {
+    id: 3,
+    salary: 2000
+}];
+
+const getEmplyee = (id) => {
+
+    return new Promise((resolve, reject) => {
+
+        const emplyeeGetted = employees.find(employees => employees.id === id);
+
+        emplyeeGetted ? resolve(emplyeeGetted) : reject (new Error('Id no encontrado!'))
+    
+    });
+}
+
+getEmplyee(3)
+        .then(respId => console.log(respId))
+        .catch(error => console.log(error))
+    
+   
+// N2 ex02
+
+const getSalary = (empleado) => {
+
+    return new Promise((resolve, reject) => {
+
+        const salaryGetted = salaries.find(salaries => salaries.id == empleado.id);
+
+        salaryGetted ? resolve(salaryGetted.salary) : reject (new Error('Empleado no encontrado'))
+    
+    });
+}
+
+getSalary({
+    id: 1,
+    name: 'Linux Torvalds'
+})
+        .then (respSalary => console.log(`salario: ${respSalary}€`))
+        .catch (error => console.log(error))
+
+
+// N2 ex03
+
+getEmplyee(2)
+        .then (resp => getSalary(resp))
+        .then (resp => console.log(`salario: ${resp}€`))
+       
+        
+// N3 ex1        
+        
+      .catch(error => console.log(error.message))
 
