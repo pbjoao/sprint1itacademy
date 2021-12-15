@@ -1,0 +1,23 @@
+// Sprint 1 entrega 1.5
+
+// N1 ex 01
+
+const intervalo = ()=>{
+    setInterval(() => {
+        console.log('Mensaje repetitiva...')
+    }, 1000);
+}
+
+intervalo();
+
+// N1 ex02
+
+const fs = require('fs');
+
+let texto = "Escribiendo un texto en un fichero"
+
+fs.writeFile('./archivo.txt', texto, error => {
+    if(error) console.log (error);
+    else console.log('El archivo fue creado')
+} );
+

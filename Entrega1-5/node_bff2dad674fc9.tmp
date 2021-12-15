@@ -1,0 +1,10 @@
+// Sprint 1 entrega 1.5
+
+// N1 ex 01
+
+const intervalo = ()=>{
+    setInterval(() => {
+        console.log('Mensaje repetitiva...')
+    }, 1000);
+}
+intervalo();
